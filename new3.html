@@ -13,6 +13,12 @@
         x.style.display = "none";
     }
 }
+function displayDate() {
+    document.getElementById("DIV").innerHTML = Date();
+}
+function myFunction() {
+    document.getElementById("demo").innerHTML = "hi click";
+}
 </script>
 <body>
     
@@ -23,17 +29,17 @@
 	
 	
 	<button onclick="myFunction()">Click Me</button>
-  <button >Second</button>
-  <button >Third</button>
+  <button onclick="displayDate()">Second</button>
+ <button onclick="myFunction()">Third</button>
   <button >Four</button>
 
   <div id="myDIV" style="display: none">
     This is my DIV element.
   </div>
-  <div style="display: none">
+  <div id="DIV" style="display: none">
     This is my Second Div.
   </div>
-  <div style="display: none">
+  <div id="demo" style="display: none">
     This is third Div.
   </div>
 	<div style="display: none">
