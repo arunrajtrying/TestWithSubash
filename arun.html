@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arun Test</title>
+    <script type="text/javascript" src="./jquery.min.js"></script>
+</head>
+
+<style type="text/css">
+   
+.skillsDouble li {
+    width:100px;
+    padding: 11px 16px;
+    text-align:center;
+    float:left;
+    background: #ff3232;
+    background: linear-gradient(to right, red 50%, blue 50%);
+    background-size: 200% 100%;
+    background-position:left bottom;
+    margin-left:10px;
+    transition:all 2s ease;
+}
+.skillsDouble li:hover {
+    background-position:right bottom;
+}
+
+</style>
+<body>
+	
+    <div class="skillsDouble">
+    <ul>
+        <li><a href="#">Automation</a>
+        </li>
+        <li><a href="#">TDD</a>
+        </li>
+    </ul>
+</div>
+<!--End skills double-->
+
+
+    <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+    </div>
+
+	<vedio 
+	
+	<input type="url" />
+    <input type="button" id="arun" value="Arun" name="clickButton">
+    <input type="button" id="boomi" value="Boomi"  name="clickButton">
+	<input type="button" id="subash" value="Subash"  name="clickButton">
+	<input type="button" id="bhavalan" value="Bhavalan"  name="clickButton">
+
+
+    <div class="arun" style="margin-top: 20px; display: none;">
+        <input type="text" name="tamil" placeholder="Tamil Arun">
+        <input type="text" name="english" placeholder="English">
+        <input type="text" name="maths" placeholder="Math">
+        <input type="text" name="science" placeholder="Science">
+        <input type="text" name="social" placeholder="social">
+        <input type="text" name="total" placeholder="Total">
+
+    </div> 
+
+    <div class="boomi" style="margin-top: 20px;display: none;" >
+        <input type="text" name="tamil" placeholder="Tamil Boomi">
+        <input type="text" name="english" placeholder="English">
+        <input type="text" name="maths" placeholder="Math">
+        <input type="text" name="science" placeholder="Science">
+        <input type="text" name="social" placeholder="social">
+        <input type="text" name="total" placeholder="Total">
+
+    </div>
+	<div class="subash" style="margin-top: 20px;display: none;" >
+        <input type="text" name="tamil" placeholder="Tamil Subash">
+        <input type="text" name="english" placeholder="English">
+        <input type="text" name="maths" placeholder="Math">
+        <input type="text" name="science" placeholder="Science">
+        <input type="text" name="social" placeholder="social">
+        <input type="text" name="total" placeholder="Total">
+
+    </div> 
+	<div class="bhavalan" style="margin-top: 20px;display: none;" >
+        <input type="text" name="tamil" placeholder="Tamil Bhavlan">
+        <input type="text" name="english" placeholder="English">
+        <input type="text" name="maths" placeholder="Math">
+        <input type="text" name="science" placeholder="Science">
+        <input type="text" name="social" placeholder="social">
+        <input type="text" name="total" placeholder="Total">
+
+    </div> 
+</body>
+
+
+<script type="text/javascript">
+/*
+- click arun 
+	- arun class select
+	- show
+	
+	
+	
+	- slect all btn
+	- btn click
+	- selcted ID button //arun bhavalan var class - 
+	- select div using class 
+	- show div 
+	
+	*/
+	btn = document.getElementsByName('clickButton')
+	btn.forEach(function(s) {
+		s.addEventListener('click', function() {
+			var ss = document.getElementsByClassName(s.id)
+			ss[0].style = 'display: block';
+		});
+	})
+	/*
+    var s = document.getElementById('arun')
+    s.addEventListener('click', function() {
+        var ss = document.getElementsByClassName('arun')
+        ss[0].style = 'display: block';
+    });
+
+    var a = document.getElementById('boomi')
+    a.addEventListener('click', function() {
+        var ss = document.getElementsByClassName('boomi')
+        ss[0].style = 'display: block';
+    })
+	
+	var a = document.getElementById('subash')
+    a.addEventListener('click', function() {
+        var ss = document.getElementsByClassName('subash')
+        ss[0].style = 'display: block';
+    })
+	
+	var a = document.getElementById('bhavalan')
+    a.addEventListener('click', function() {
+        var ss = document.getElementsByClassName('bhavlan')
+        ss[0].style = 'display: block';
+    })
+*/
+    var tamil = document.getElementsByName('tamil')
+    var english = document.getElementsByName('english')
+    var maths = document.getElementsByName('maths')
+    var science = document.getElementsByName('science')
+    var social = document.getElementsByName('social')
+    var total = document.getElementsByName('total')
+ 
+
+
+
+    tamil[0].addEventListener('keyup', function() {
+        total[0].value = parseInt(tamil[0].value) + parseInt(english[0].value) +parseInt(maths[0].value) + parseInt(science[0].value) + parseInt(social[0].value) ;
+    });
+    english[0].addEventListener('keyup', function() {
+        total[0].value = parseInt(tamil[0].value) + parseInt(english[0].value) +parseInt(maths[0].value) + parseInt(science[0].value) + parseInt(social[0].value) ;
+    });
+    maths[0].addEventListener('keyup',function(){
+        total[0].value = parseInt(tamil[0].value) + parseInt(english[0].value) +parseInt(maths[0].value) + parseInt(science[0].value) + parseInt(social[0].value) ;
+    });
+    science[0].addEventListener('keyup',function(){
+        total[0].value = parseInt(tamil[0].value) + parseInt(english[0].value) +parseInt(maths[0].value) + parseInt(science[0].value) + parseInt(social[0].value) ;
+    });
+    social[0].addEventListener('keyup',function(){
+        total[0].value = parseInt(tamil[0].value) + parseInt(english[0].value) +parseInt(maths[0].value) + parseInt(science[0].value) + parseInt(social[0].value) ;
+    });
+    
+	
+	
+	
+	
+	 tamil[1].addEventListener('keyup', function() {
+        total[1].value = parseInt(tamil[1].value) + parseInt(english[1].value) +parseInt(maths[1].value) + parseInt(science[1].value) + parseInt(social[1].value) ;
+    });
+    english[1].addEventListener('keyup', function() {
+        total[1].value = parseInt(tamil[1].value) + parseInt(english[1].value) +parseInt(maths[1].value) + parseInt(science[1].value) + parseInt(social[1].value) ;
+    });
+    maths[1].addEventListener('keyup',function(){
+        total[1].value = parseInt(tamil[1].value) + parseInt(english[1].value) +parseInt(maths[1].value) + parseInt(science[1].value) + parseInt(social[1].value) ;
+    });
+    science[1].addEventListener('keyup',function(){
+        total[1].value = parseInt(tamil[1].value) + parseInt(english[1].value) +parseInt(maths[1].value) + parseInt(science[1].value) + parseInt(social[1].value) ;
+    });
+    social[1].addEventListener('keyup',function(){
+        total[1].value = parseInt(tamil[1].value) + parseInt(english[1].value) +parseInt(maths[1].value) + parseInt(science[1].value) + parseInt(social[1].value) ;
+    });
+    
+
+
+
+// - select element
+// - Add required event
+// - do ur stuff
+
+
+
+    // $('#arun').click(function() {
+    //     $('.arun').show()
+    //     $('.boomi').hide()
+    // })
+    
+
+    // $('#boomi').click(function() {
+    //     $('.boomi').show()
+    //     $('.arun').hide()
+    // })
+
+</script>
+</html>
